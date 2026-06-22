@@ -22,6 +22,7 @@ export default async function handler(req, res) {
     );
 
     const tokenData = await tokenResponse.json();
+    console.log(tokenData);
 
     // Return exact Salesforce error for debugging
     if (!tokenData.access_token) {
