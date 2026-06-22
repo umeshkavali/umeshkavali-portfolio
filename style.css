@@ -121,3 +121,13 @@ nav ul li a:hover{
     margin:10px;
     border-radius:8px;
 }
+
+#contact a {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}

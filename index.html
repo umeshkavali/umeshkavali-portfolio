@@ -15,7 +15,7 @@
         <li><a href="#skills">Technical Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#signup">Signup</a></li>
+        <li><a href="#signup">Sign Up</a></li>
       </ul>
     </nav>
 
@@ -94,15 +94,60 @@
       <h2>Contact</h2>
 
       <p>
-        <strong>Email:</strong> 'hello@umeshkavali.shop' and
-        'admin@umeshkavali.shop'
+        <a href="mailto:hello@umeshkavali.shop">📧 hello@umeshkavali.shop</a>
       </p>
 
-      <p><strong>Website:</strong> www.umeshkavali.shop</p>
+      <p>
+        <a href="https://www.umeshkavali.shop" target="_blank"
+          >🌐 www.umeshkavali.shop</a
+        >
+      </p>
 
-      <p><strong>GitHub:</strong> github.com/umeshkavali</p>
+      <p>
+        <a href="https://github.com/umeshkavali" target="_blank"
+          >💻 github.com/umeshkavali</a
+        >
+      </p>
 
-      <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/umeshkavali/</p>
+      <p>
+        <a href="https://www.linkedin.com/in/umeshkavali/" target="_blank"
+          >🔗 LinkedIn</a
+        >
+      </p>
+    </section>
+
+    <!-- Sign Up -->
+    <section class="card" id="signup">
+      <h2>Sign Up</h2>
+
+      <p>
+        Interested in learning more about my work or collaborating on a project?
+        Fill out the form below to get in touch!
+      </p>
+
+      <form action="/api/signup" method="POST">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
     </section>
   </body>
 </html>
