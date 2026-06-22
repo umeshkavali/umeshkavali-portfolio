@@ -6,7 +6,6 @@ export default async function handler(req, res) {
   const { firstName, lastName, email, password } = req.body;
 
   try {
-    // Get Salesforce token using credentials from environment variables
     const tokenResponse = await fetch(
       "https://login.salesforce.com/services/oauth2/token",
       {
@@ -24,11 +23,15 @@ export default async function handler(req, res) {
 
     const tokenData = await tokenResponse.json();
 
+    // Return exact Salesforce error for debugging
     if (!tokenData.access_token) {
-      return res.status(401).json({ error: "Salesforce authentication failed" });
+      return res.status(401).json({
+        error: "Salesforce authentication failed",
+        sf_error: tokenData.error,
+        sf_error_description: tokenData.error_description
+      });
     }
 
-    // Create Shop User in Salesforce
     const sfResponse = await fetch(
       `${process.env.SF_INSTANCE_URL}/services/apexrest/signup`,
       {
@@ -49,6 +52,6 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: result });
     }
   } catch (error) {
-    return res.status(500).json({ error: "Something went wrong" });
+    return res.status(500).json({ error: error.message });
   }
 }
