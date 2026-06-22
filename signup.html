@@ -5,20 +5,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="card" id="signup-container">
-      <h2>Create Account</h2>
+    <div class="signup-wrapper">
+      <div class="signup-box">
+        <h1>Create Account</h1>
+        <p class="signup-subtitle">Join Umesh Kavali Shop</p>
 
-      <div id="signup-message"></div>
+        <div id="signup-message"></div>
 
-      <div class="signup-form">
-        <input type="text" id="firstName" placeholder="First Name" />
-        <input type="text" id="lastName" placeholder="Last Name" />
-        <input type="email" id="email" placeholder="Email" />
-        <input type="password" id="password" placeholder="Password" />
-        <button onclick="signUp()">Sign Up</button>
+        <div class="signup-form">
+          <div class="form-row">
+            <input type="text" id="firstName" placeholder="First Name" />
+            <input type="text" id="lastName" placeholder="Last Name" />
+          </div>
+          <input type="email" id="email" placeholder="Email Address" />
+          <input type="password" id="password" placeholder="Password" />
+          <button class="signup-btn" onclick="signUp()">Create Account</button>
+        </div>
+
+        <p class="login-link">
+          Already have an account? <a href="login.html">Sign In</a>
+        </p>
       </div>
     </div>
-
     <script src="signup.js"></script>
   </body>
 </html>
